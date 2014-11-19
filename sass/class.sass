@@ -1,0 +1,57 @@
+@import compass
+@import compass/css3
+@import reset
+@import animation
+@import susy 
+
+
+
+$column-width: 80px //欄位寬度  
+$gutter-width: 12px //欄位與欄位間的間距  
+$grid-padding: 0px //格線最外圍左右邊的間距  
+
+$pc : 767px 12 
+$tablet :786px  8 480px
+$mobile: 5 480px
+
+
+//Grid system in sussy
+.oops
+	height: 800px
+	background-color: #999
+
+	+at-breakpoint($mobile)  
+		+container
+		// +susy-grid-background
+
+	+at-breakpoint($tablet)  
+		+container
+		// +susy-grid-background
+
+	+at-breakpoint($pc)  
+		+container
+		// +susy-grid-background
+		+span-columns(4) 
+
+	
+.item1
+	background-color: #951
+	height: 50px
+
+
+
+//+span-columns(3)  佔幾個GRID
+//+nth-omega(3n)  	靠右
+//+isolate(4) 		跨GRID
+
+//+isolate-grid(4)  
+
+
+//	+transition(all 0.5s)
+
+// +leader() = 設定margin-top
+// +padding-leader() = 設定padding-top
+// +trailer() = 設定margin-bottom 
+// +padding-trailer() = 設定padding-bottom
+// +pre(1) margin-left，向左推一個columns
+// +post() margin-right

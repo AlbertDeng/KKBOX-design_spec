@@ -1,0 +1,202 @@
+
+@import compass
+@import compass/css3
+@import variable
+@import mixin
+@import reset
+@import extend
+@import animation
+@import susy 
+
+
+
+$column-width: 90px //欄位寬度  
+$gutter-width: 12px //欄位與欄位間的間距  
+$grid-padding: 0px //格線最外圍左右邊的間距  
+$kkcolor: #00adcc
+
+
+$pc : 767px 12 
+$tablet :786px  8 480px
+$mobile: 5 480px
+
+
+.header
+	width: 100%
+	height: 80px
+
+
+.logo_wrapper
+	position: relative
+	+at-breakpoint($mobile)  
+		+container
+
+	+at-breakpoint($tablet)  
+		+container
+
+	+at-breakpoint($pc)  
+		+container
+
+
+.logo
+	+bg('logo.png')
+	position: absolute
+	left: 20px
+	top: 20px
+
+
+.menu_wrapper
+	width: 100%
+	background: $kkcolor
+
+
+.menu_desktop
+	height: 50px
+	background: $kkcolor
+
+
+
+	+at-breakpoint($mobile)  
+		+container
+		display: none
+
+	+at-breakpoint($tablet)  
+		+container
+		display: none
+	+at-breakpoint($pc)  
+		+container
+		height: 50px
+		ul
+			li
+				display: block
+				position: relative
+				color: #FFF
+				float: left
+				line-height: 50px
+				padding: 0 30px
+				border-right: 1px solid #00b5d6
+				font-weight: lighter
+				cursor: pointer
+			
+
+
+.submenu
+	position: absolute
+	top: 50px
+	left: -10px
+	// background-color: #789
+	// +box-sizing(border-box) 	
+
+
+	ul
+		li
+			border: none
+			background: none
+			a
+				display: block
+				width: 100px
+				background: rgba(181, 243, 245, .9)
+				color: #555
+				padding: 0 20px
+				font-size: 14px
+			
+			a:hover
+				background: #515554
+				color: #FFF
+
+
+
+
+
+
+
+
+.menu_portable
+	height: 50px
+	background: #00adcc
+
+	+at-breakpoint($mobile)  
+		+container
+		height: 50px
+		background: #00adcc
+
+	+at-breakpoint($tablet)  
+		+container
+		height: 50px
+		background: #00adcc
+
+	+at-breakpoint($pc)  
+		+container
+		display: none
+
+
+
+
+.content
+	background: #f5f5f5
+	+at-breakpoint($mobile)  
+		+container
+		// +susy-grid-background
+
+	+at-breakpoint($tablet)  
+		+container
+		// +susy-grid-background
+
+	+at-breakpoint($pc)  
+		+container
+		// +susy-grid-background
+		img
+			display: block
+			margin: 0 auto
+			margin-bottom: 30px
+
+
+
+
+
+
+
+// ===============================
+.haha_wrapper
+	width: 100%
+	height: 50px
+	background-color: #00adcc
+
+
+.haha
+	
+	+at-breakpoint($mobile)  
+		+container
+		// +susy-grid-background
+
+	+at-breakpoint($tablet)  
+		+container
+		// +susy-grid-background
+
+	+at-breakpoint($pc)  
+		+container
+		// +susy-grid-background
+
+.item1
+	height: 200px
+	background-color: #951
+	margin-bottom: 20px
+	
+	+at-breakpoint($mobile)  
+		+container
+		+span-columns(5)
+
+	+at-breakpoint($tablet)  
+		+container
+		+span-columns(3)
+
+	+at-breakpoint($pc)  
+		+container
+		+span-columns(3)
+		+nth-omega(4n) 
+
+
+
+
+			
+	
